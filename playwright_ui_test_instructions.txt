@@ -1,0 +1,35 @@
+
+# Add UI Test to Show Browser Running (Playwright)
+
+1. Create the folder if it doesn't exist:
+
+tests/ui
+
+2. Create the file:
+
+tests/ui/navigation.spec.js
+
+3. Paste the following code:
+
+import { test, expect } from '@playwright/test';
+
+test('UI navigation example', async ({ page }) => {
+
+  await page.goto('https://example.com');
+
+  await expect(page).toHaveTitle(/Example/);
+
+  // wait so the browser stays open long enough to see during recording
+  await page.waitForTimeout(3000);
+
+});
+
+4. Run the tests with the browser visible:
+
+npm test -- --headed --workers=1 --reporter=list
+
+5. Commit the change (recommended):
+
+git add .
+git commit -m "Add UI navigation test with Playwright"
+git push
