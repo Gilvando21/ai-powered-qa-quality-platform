@@ -1,0 +1,18 @@
+{
+  "name": "qa-quality-platform",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "playwright test",
+    "ai-tests": "node ai/generateTests.js",
+    "performance": "k6 run performance/k6-test.js",
+    "monitoring": "docker compose -f docker/docker-compose.yml up"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "allure-playwright": "^2.0.0"
+  },
+  "dependencies": {
+    "openai": "^4.0.0",
+    "axios": "^1.6.0"
+  }
+}

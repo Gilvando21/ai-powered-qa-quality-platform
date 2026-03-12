@@ -1,0 +1,15 @@
+{
+  "dashboard": {
+    "title": "QA Quality Metrics",
+    "panels": [
+      {
+        "title": "Test Success Rate",
+        "type": "graph"
+      },
+      {
+        "title": "API Response Time",
+        "type": "graph"
+      }
+    ]
+  }
+}
